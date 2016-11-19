@@ -3,23 +3,30 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-    public float Interval;
+    public float Interval, StaircaseInterval;
     public Transform[] positions;
     public GameObject Acorn;
     public GameObject GoldenAcorn;
     public GameObject Bomb;
 
-    private float Timer;
+    private float Timer, StaircaseTimer;
 
 	// Use this for initialization
 	void Start () {
         Timer = Interval;
-	
+        StaircaseTimer = StaircaseInterval;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         Timer -= Time.deltaTime;
+        StaircaseTimer -= Time.deltaTime;
+
+        if (Interval > 0.4f&& StaircaseTimer <= 0)
+        {
+            StaircaseTimer = StaircaseInterval;
+            Interval-= 0.1f;
+        }
         if (Timer <= 0)
         {
             Timer = Interval;

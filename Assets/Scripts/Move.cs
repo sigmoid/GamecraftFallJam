@@ -15,4 +15,5 @@ public class Move : MonoBehaviour {
         transform.position += Speed * Time.deltaTime * Vector3.down;
         transform.Rotate(Vector3.right * 70 * Time.deltaTime);
 	}
+
 }
