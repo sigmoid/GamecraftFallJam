@@ -33,6 +33,14 @@ public class PauseMenu : MonoBehaviour {
 	
 	}
 
+    public void Pause()
+    {
+        Debug.Log("Hello");
+        PausePanel.SetActive(true);
+        regTimeScale = Time.timeScale;
+        Time.timeScale = 0;
+    }
+
     public void PressResume()
     {
         PausePanel.SetActive(false);

@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour {
 
     void PlayerMovement1 () {
 
-        var left = Input.GetKey(KeyCode.LeftArrow);
-        var right = Input.GetKey(KeyCode.RightArrow);
+        var left = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);
+        var right = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
         
         if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
