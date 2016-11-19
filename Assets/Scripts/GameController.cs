@@ -47,6 +47,7 @@ public class GameController : MonoBehaviour {
         if (_lives <= 0)
         {
             SceneManager.LoadScene("Game Over Screen");
+            DisplayHighScores.compareScores();
         }
 
     }
