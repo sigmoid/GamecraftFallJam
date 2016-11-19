@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour {
     public float Interval;
     public Transform[] positions;
     public GameObject Acorn;
+    public GameObject GoldenAcorn;
     public GameObject Bomb;
 
     private float Timer;
@@ -41,12 +42,16 @@ public class Spawner : MonoBehaviour {
             }
             else if (randNum < 50)
             {
-                BombInstance = Instantiate(Bomb, positions[i].position, Quaternion.identity)as GameObject;
+                BombInstance = Instantiate(Bomb, positions[i].position, Quaternion.identity) as GameObject;
                 if (allBombs == true && i == 2)
                 {
                     Destroy(BombInstance);
                     Debug.Log("Destroyed Bombs");
                 }
+            }
+            else if (randNum < 60)
+            {
+                Instantiate(GoldenAcorn,positions[i].position,Quaternion.identity);
             }
             else
             {

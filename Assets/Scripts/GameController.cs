@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour {
         _lives -= lives;
         if (_lives <= 0)
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Game Over Screen");
         }
 
     }
