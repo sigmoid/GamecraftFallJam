@@ -18,4 +18,5 @@ public class DisplayLives : MonoBehaviour {
 	void Update () {
         Livesdisplay.text = "Lives: " + GameController.Game._lives.ToString(); 
 	}
+
 }
