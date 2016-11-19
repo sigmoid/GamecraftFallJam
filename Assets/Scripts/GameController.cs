@@ -36,6 +36,9 @@ public class GameController : MonoBehaviour {
 
     public void SubtractLives(int lives)
     {
+        if(lives!=0)
+            Camera.main.GetComponent<ScreenShake>().Shake(.5f, .5f);
+
         _lives -= lives;
         if (_lives <= 0)
         {
