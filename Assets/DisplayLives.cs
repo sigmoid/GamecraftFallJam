@@ -16,7 +16,7 @@ public class DisplayLives : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Livesdisplay.text = "Lives: " + GameController.Game._lives.ToString(); 
+        Livesdisplay.text = GameController.Game._lives.ToString(); 
 	}
 
 }
