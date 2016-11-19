@@ -8,9 +8,12 @@ public class ItemCollision : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-       GameController.Game.AddPoints(points);
-       GameController.Game.SubtractLives(damage);
-        Destroy(gameObject);        
+        if (other.tag == "Player")
+        {
+            GameController.Game.AddPoints(points);
+            GameController.Game.SubtractLives(damage);
+            Destroy(gameObject);
+        }        
     }
 
 	// Use this for initialization

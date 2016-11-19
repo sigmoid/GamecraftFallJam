@@ -13,6 +13,6 @@ public class Move : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.position += Speed * Time.deltaTime * Vector3.down;
-	
+        transform.Rotate(Vector3.right * 50 * Time.deltaTime);
 	}
 }

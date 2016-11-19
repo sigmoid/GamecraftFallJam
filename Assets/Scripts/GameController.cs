@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
-    private int score;
+    public int score;
     public int _lives;
 
     public static GameController Game;
@@ -21,8 +22,6 @@ public class GameController : MonoBehaviour {
    public  void AddPoints(int points)
     {
         score += points;
-        Debug.Log("AddedPoints: " + points);
-        Debug.Log("TotalPoints: " + score);
     }
 
     public void SubtractPoints(int points)
@@ -38,8 +37,11 @@ public class GameController : MonoBehaviour {
     public void SubtractLives(int lives)
     {
         _lives -= lives;
-        Debug.Log("Lostalife: " + lives);
-        Debug.Log("TotalLives: " + _lives);
+        if (_lives <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+
     }
 
 	// Use this for initialization
