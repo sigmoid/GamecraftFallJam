@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
     
     public Transform leftlane,  midlane, rightlane;
 
+    public AudioClip SwitchSound;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,10 @@ public class PlayerController : MonoBehaviour {
         var left = Input.GetKey(KeyCode.LeftArrow);
         var right = Input.GetKey(KeyCode.RightArrow);
         
+        if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            GameController.Game.AudioPlayer.PlayOneShot(SwitchSound);
+        }
 
         if (right)
         {

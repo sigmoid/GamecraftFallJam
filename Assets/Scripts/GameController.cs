@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour {
 
     public static GameController Game;
 
+    public AudioSource AudioPlayer;
+
     void Awake()
     {
 
@@ -17,6 +19,8 @@ public class GameController : MonoBehaviour {
             return; 
         }
         Game = this;
+
+        AudioPlayer = GetComponent<AudioSource>();
     }
 
    public  void AddPoints(int points)
@@ -37,7 +41,7 @@ public class GameController : MonoBehaviour {
     public void SubtractLives(int lives)
     {
         if(lives!=0)
-            Camera.main.GetComponent<ScreenShake>().Shake(.5f, .5f);
+            Camera.main.GetComponent<ScreenShake>().Shake(.25f, .25f);
 
         _lives -= lives;
         if (_lives <= 0)

@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 6618fcdab46edc74389b8a4ee6785ec0
-timeCreated: 1479521182
+timeCreated: 1479537501
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - leftlane: {instanceID: 0}
+  - midlane: {instanceID: 0}
+  - rightlane: {instanceID: 0}
+  - SwitchSound: {fileID: 8300000, guid: 7aa19209098832e4e98d972e575dd468, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
